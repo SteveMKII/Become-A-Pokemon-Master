@@ -89,8 +89,9 @@ class Pokemon:
         else:
             print("{p1} is knocked out, {p1} cannot attack {p2}".format(p1=self.name, p2=p2.name))
 
-            # method incorporates the pokemons speed and decides who goes first. otherwise the same as the attack method
 
+
+    # method incorporates the pokemons speed and decides who goes first. otherwise the same as the attack method
     def attack2(self, p2):
         if self.is_knocked_out == False:
             if p2.is_knocked_out == False:
@@ -110,8 +111,10 @@ class Pokemon:
         else:
             print("{p1} is knocked out, {p1} cannot attack {p2}".format(p1=self.name, p2=p2.name))
 
-            # helper method for attack2 method
 
+
+
+    # helper method for attack2 method
     def attack_helper(self, p2):
         for p1_poketype in poketypes.keys():
             if p1_poketype == self.type:
