@@ -275,17 +275,6 @@ class Trainer:
         else:
             print("Your pokemon is knocked out, you can't attack!")
 
-    # alternate method of attack_player2 to see which one is easier to read
-    def attack_player3(self, player2):
-        if self.active_pokemon.is_knocked_out == False and player2.active_pokemon.is_knocked_out == False:
-            print("{p1} has attacked {p2}!".format(p1=self.name, p2=player2.name))
-            self.active_pokemon.attack(player2.active_pokemon)
-        elif self.active_pokemon.is_knocked_out == True and player2.active_pokemon.is_knocked_out == False:
-            print("Your pokemon is knocked out, you cannot attack!")
-        elif self.active_pokemon.is_knocked_out == False and player2.active_pokemon.is_knocked_out == True:
-            print("{p2}'s pokemon is already knocked out, you cannot attack!".format(p2=player2.name))
-        elif self.active_pokemon.is_knocked_out == True and player2.active_pokemon.is_knocked_out == True:
-            print("Both player's pokemon are knocked out and cannot fight.")
 
     def use_potion(self):
         if self.potions > 0:
